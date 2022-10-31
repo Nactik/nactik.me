@@ -1,0 +1,9 @@
+node_modules/
+.prettierrc
+**/dist
+**/coverage
+**/build
+**/docs
+**/lib
+**/CHANGELOG.md
+**/*.d.ts
