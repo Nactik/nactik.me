@@ -10,7 +10,7 @@ export const ThemeSwitcher = ({ setTheme = (string: string) => {} }) => {
         setTheme(selectedTheme);
     };
 
-    const icon: string = isChecked ? 'ri-moon-fill' : 'ri-sun-fill';
+    const icon: string = isChecked ? 'ri-sun-fill' : 'ri-moon-fill';
 
     return (
         <label htmlFor="themeToggle" className="flex flex-row flew-nowrap relative justify-evenly  cursor-pointer">
