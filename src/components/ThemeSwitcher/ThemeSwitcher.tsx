@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MoonIcon, SunIcon } from '@heroicons/react/20/solid';
+import 'remixicon/fonts/remixicon.css';
 
 export const ThemeSwitcher = ({ setTheme = (string: string) => {} }) => {
     const [isChecked, setIsChecked] = useState<boolean>(false);
@@ -9,6 +9,8 @@ export const ThemeSwitcher = ({ setTheme = (string: string) => {} }) => {
         const selectedTheme: string = isChecked ? 'ctp-latte' : 'ctp-frappe';
         setTheme(selectedTheme);
     };
+
+    const icon: string = isChecked ? 'ri-moon-fill' : 'ri-sun-fill';
 
     return (
         <label htmlFor="themeToggle" className="flex flex-row flew-nowrap relative justify-evenly  cursor-pointer">
@@ -20,11 +22,7 @@ export const ThemeSwitcher = ({ setTheme = (string: string) => {} }) => {
                 checked={isChecked}
                 onChange={checkHandler}
             />
-            {isChecked ? (
-                <SunIcon className="h-6 w-6 text-ctp-text hover:text-ctp-flamingo"></SunIcon>
-            ) : (
-                <MoonIcon className="h-6 w-6 text-ctp-text hover:text-ctp-flamingo"></MoonIcon>
-            )}
+            <i className={`h-6 w-6 text-ctp-text hover:text-ctp-flamingo ${icon}`}></i>
         </label>
     );
 };
