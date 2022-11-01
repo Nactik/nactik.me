@@ -24,7 +24,9 @@ const navItems: NavItem[] = [
 export const Navbar = ({ setTheme = (string: string) => {} }) => {
     return (
         <nav className="flex flex-row justify-between min-h-[52px] ">
-            <div className="p-3 min-w-max text-ctp-text font-medium text-xl">Nathan Capiaux</div>
+            <div className="p-3 min-w-max text-ctp-text font-medium text-xl">
+                Nathan Capiaux<span className="text-ctp-flamingo">.</span>
+            </div>
             <ul className="flex flex-row">
                 {navItems.map((element: NavItem) => {
                     return (

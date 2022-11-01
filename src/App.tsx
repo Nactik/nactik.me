@@ -6,7 +6,7 @@ function App() {
     const [theme, setTheme] = useState<string>('ctp-latte');
 
     return (
-        <div className={`App min-h-screen ${theme} bg-ctp-base`}>
+        <div className={`App min-h-screen ${theme} bg-ctp-base font-mono`}>
             <Navbar setTheme={setTheme}></Navbar>
         </div>
     );
