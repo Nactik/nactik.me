@@ -1,16 +1,17 @@
 import { useState } from 'react';
+import { MoonIcon, SunIcon } from '@heroicons/react/20/solid';
 
 export const ThemeSwitcher = ({ setTheme = (string: string) => {} }) => {
     const [isChecked, setIsChecked] = useState<boolean>(false);
 
     const checkHandler = () => {
         setIsChecked(!isChecked);
-        const selectedTheme: string = isChecked ? 'ctp-frappe' : 'ctp-latte';
+        const selectedTheme: string = isChecked ? 'ctp-latte' : 'ctp-frappe';
         setTheme(selectedTheme);
     };
 
     return (
-        <label htmlFor="themeToggle" className="inline-flex relative items-center cursor-pointer">
+        <label htmlFor="themeToggle" className="flex flex-row flew-nowrap relative justify-evenly  cursor-pointer">
             <input
                 type="checkbox"
                 value=""
@@ -19,8 +20,11 @@ export const ThemeSwitcher = ({ setTheme = (string: string) => {} }) => {
                 checked={isChecked}
                 onChange={checkHandler}
             />
-            <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-            <span className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me</span>
+            {isChecked ? (
+                <SunIcon className="h-6 w-6 text-ctp-text hover:text-ctp-flamingo"></SunIcon>
+            ) : (
+                <MoonIcon className="h-6 w-6 text-ctp-text hover:text-ctp-flamingo"></MoonIcon>
+            )}
         </label>
     );
 };
