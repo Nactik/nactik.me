@@ -37,22 +37,22 @@ export const Navbar = ({ setTheme = (string: string) => {} }) => {
     };
 
     return (
-        <nav className="flex flex-row justify-between min-h-[52px] ">
-            <div className="p-3 min-w-max text-ctp-text font-medium text-xl">
+        <nav className="flex flex-row justify-between items-center h-14 fixed w-full z-20 top-0 left-0 bg-ctp-base">
+            <div className="p-3 min-w-max text-ctp-text font-medium text-xl h-full">
                 Nathan Capiaux<span className="text-ctp-flamingo">.</span>
             </div>
-            <ul className="flex flex-row">
+            <ul className="flex flex-row m-0 h-full items-center">
                 {navItems.map((element: NavItem) => {
                     return (
                         <a href={element.url}>
-                            <li className="flex flex-row justify-evenly min-h-full min-w-max font-medium p-3 mr-2 text-ctp-text hover:border-b-2 hover:border-b-ctp-flamingo hover:text-ctp-flamingo">
+                            <li className="flex flex-row justify-evenly h-full min-w-max font-medium p-3 mr-2 text-ctp-text border-b-2 border-b-ctp-base hover:border-b-ctp-flamingo hover:text-ctp-flamingo">
                                 {getIcons(element.icon)}
                                 {element.label}
                             </li>
                         </a>
                     );
                 })}
-                <li className="p-3 mr-2 min-h-full">
+                <li className="p-3 mr-2 h-full ">
                     <ThemeSwitcher setTheme={setTheme}></ThemeSwitcher>
                 </li>
             </ul>
