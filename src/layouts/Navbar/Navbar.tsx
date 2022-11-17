@@ -44,12 +44,12 @@ export const Navbar = ({ setTheme = (string: string) => {} }) => {
             <ul className="flex flex-row m-0 h-full items-center">
                 {navItems.map((element: NavItem) => {
                     return (
-                        <a href={element.url}>
-                            <li className="flex flex-row justify-evenly h-full min-w-max font-medium p-3 mr-2 text-ctp-text border-b-2 border-b-ctp-base hover:border-b-ctp-flamingo hover:text-ctp-flamingo">
+                        <li className=" h-full min-w-max font-medium p-3 mr-2 text-ctp-text border-b-2 border-b-ctp-base hover:border-b-ctp-flamingo hover:text-ctp-flamingo">
+                            <a href={element.url} className="flex flex-row justify-evenly">
                                 {getIcons(element.icon)}
                                 {element.label}
-                            </li>
-                        </a>
+                            </a>
+                        </li>
                     );
                 })}
                 <li className="p-3 mr-2 h-full ">
