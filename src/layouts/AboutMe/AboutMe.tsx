@@ -2,7 +2,7 @@ import { ProfileCard } from '../../components/ProfileCard';
 
 export const AboutMe = () => {
     return (
-        <div className="flex lg:flex-row flex-col justify-around items-center min-h-screen text-ctp-text">
+        <div className="flex lg:flex-row flex-col justify-around items-center min-h-screen text-ctp-text pt-10">
             <ProfileCard></ProfileCard>
             <hr className=" lg:h-[50vh] rounded lg:w-1 w-[50vh] h-1 bg-ctp-flamingo m-3" />
             <div className="p-3 max-w-lg max-h-[80vh]">
