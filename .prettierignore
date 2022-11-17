@@ -7,3 +7,5 @@ node_modules/
 **/lib
 **/CHANGELOG.md
 **/*.d.ts
+
+**/tailwind.config.cjs
